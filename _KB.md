@@ -1,6 +1,5 @@
 # Knowledge Base
 
-
 ## Herramientas
 
 - [CEIDS ULIMA GIT Tutorial](https://www.youtube.com/watch?v=w4WQqtCzCno)
