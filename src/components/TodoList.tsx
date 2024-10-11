@@ -1,23 +1,15 @@
+import { TodoType } from "../@types/TodoType"
 import TodoItem from "./TodoItem"
 
-export interface TodoType {
-    id : number,
-    name : string
+interface TodoListProps {
+    todos : TodoType[]
 }
 
-const TodoList = () => {
-    const listaTODOs : TodoType[] = [
-        { id : 1, name : "Estudiar para la practica" },
-        { id : 2, name : "Comprar el pan" },
-        { id : 3 , name : "Ir al cine"},
-        { id : 4 , name : "Dormir"}
-    ]
-
-
-    return <ul>
+const TodoList = (props : TodoListProps) => {
+    return <ul className="list-group">
         {
-            listaTODOs.map( (todo : TodoType) => {
-                return <TodoItem todo={ todo } />
+            props.todos.map( (todo : TodoType) => {
+                return <TodoItem key={ todo.id } todo={ todo } />
             } )
         }
     </ul>
